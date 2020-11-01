@@ -1,0 +1,79 @@
+.parallax-window {
+    height: 1000px;
+}
+#linahall {
+    font-family: 'Passion One'; 
+    text-align:center; 
+    font-size: 10em; 
+    letter-spacing: 0.2em; 
+    padding-top: 30%; 
+    color: #2F2E2E
+}
+#subtitle {
+    font-family: belleza; 
+    text-align:center; 
+    color: #8C0B0B;
+}
+#sobremim {
+    height: 589px;
+    background-color: #6B2D7F;
+}
+.sobremim-box {
+    border-top: solid 8px white;
+    height: 580px;
+    background-color: #6B2D7F;
+    padding: 0;
+}
+#sobremim-left {
+    background-image: url('../img/sobremim.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 250px;
+    height: 581px;
+    width: 100%;
+}
+#sobremim-left-inner-box {
+    border: 13px solid #8C0B0B;
+    margin-top: 10%;
+    margin-right: 5%;
+    width: 80%;
+    float: right;
+    height: 400px;
+}
+#sobremim-title {
+    font-family: 'Passion One';
+    color: white;
+    text-align: right;
+    font-size: 4.7em;
+}
+#sobremim-text {
+    font-family: 'arial';
+    color: white;
+    margin: 20% 10% 0 10%;
+}
+#acessaratwitch {
+margin-top: 30%;
+    margin-left: 10%;
+}
+#squarebtn {
+    border: solid 10px white;
+    color: white;
+    height: 120px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #6B2D7F;
+    transition:0.5s;
+}
+#squarebtn:hover {
+    background-color: transparent;
+}
+#squarebtn-text {
+    font-size: 5em;
+    font-family: "Passion one";
+    letter-spacing: 0.1em;
+}
+#parallax2 {
+    height: 800px;
+}

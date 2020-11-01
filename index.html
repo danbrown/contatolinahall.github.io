@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Lina Hall</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- parallax -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax/parallax.js"></script>
+
+<!-- fonts -->
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Belleza' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Passion One' rel='stylesheet'>
+
+<link rel="stylesheet" href="css/index-style.css">
+</head>
+
+<body>
+<!-- navbar usando bootstrap-->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand" href="#home" style="margin-left:20%;"><img src="img/instagram.png" width=20px></a>
+      <a class="navbar-brand" href="#home"><img src="img/youtube.png" width=20px></a>
+      <a class="navbar-brand" href="#home"><img src="img/twitter.png" width=20px></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--troquei mr pra ml... eh de left e right-->
+
+        <ul class="navbar-nav m-auto"> 
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Página Inicial<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#cursos">Sobre<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#matricula">Mídias<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#jogos">Galeria<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#contato">Contato<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Título com scroll background -->
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/first.jpg">
+        <h1 id="linahall">LINA HALL</h1>
+        <h2 id="subtitle">streamer • criadora de conteúdo • cosplayer</h1>
+    </div>
+
+    <!-- Sobre mim. Seção de duas colunas com foto e texto. -->
+    <div id="sobremim">
+        <div class="container"> <div class="row">
+		    <div class="col-sm-6 sobremim-box">
+			    <div id="sobremim-left">
+                    <div id="sobremim-left-inner-box">
+                        <h2 id="sobremim-title">SOBRE</h2>
+                        <h2 id="sobremim-title">MIM!</h2>
+                    </div>
+                </div>
+		    </div>
+		    <div class="col-sm-6 sobremim-box">
+			    <p id="sobremim-text">
+                Sou Wanessa Maximo conhecida por Lina Hall tenho 21 anos. Sou de Florianópolis, Estudante de moda, cosplayer, 
+                streamer na plataforma twitch, influencer e criadora de conteúdo.
+                <br>
+                LIVES DE SEGUNDA A QUINTA, SÁBADOS E DOMINGOS A PARTIR DAS 13H
+                </p>
+                <button type="button" class="btn btn-dark" id ="acessaratwitch">Acessar a Twitch</button>
+		    </div>
+        </div> </div>
+    </div>
+
+    <!-- Scroll background com alguns botões     -->
+    <div class="parallax-window" id="parallax2" data-parallax="scroll" data-image-src="img/btns-background.jpg">
+        <div style="padding-top:150px"></div>
+        <div id="squarebtn">
+            <h1 id="squarebtn-text">Twitch</h1>
+        </div>
+        <div style="padding-top:70px"></div>
+        <div id="squarebtn">
+            <h1 id="squarebtn-text">Instagram</h1>
+        </div>
+        <div style="padding-top:70px"></div>
+        <div id="squarebtn">
+            <h1 id="squarebtn-text">Youtube</h1>
+        </div>
+    </div>
+
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<p>a</p>
+		</div>
+		<div class="col-sm-4">
+			<p>a</p>
+		</div>
+	</div>
+</div>
+-->
+<!-- bootstrap recomenda esses scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
