@@ -15,11 +15,11 @@
     color: #8C0B0B;
 }
 #sobremim {
-    height: 589px;
+    border-bottom: solid 9px #6B2D7F;
     background-color: #6B2D7F;
 }
 .sobremim-box {
-    border-top: solid 8px white;
+    border-top: solid 8px #6B2D7F;
     height: 580px;
     background-color: #6B2D7F;
     padding: 0;
@@ -52,7 +52,7 @@
     margin: 20% 10% 0 10%;
 }
 #acessaratwitch {
-margin-top: 30%;
+    margin-top: 30%;
     margin-left: 10%;
 }
 #squarebtn {
@@ -74,6 +74,42 @@ margin-top: 30%;
     font-family: "Passion one";
     letter-spacing: 0.1em;
 }
+@media only screen and (max-width: 770px) {
+  #squarebtn-text {
+    padding-top: 20px;
+    font-size: 3em;
+  }
+}
 #parallax2 {
     height: 800px;
+}
+#pic1 {
+    height: 400px;
+    background-image: url('../img/pic/pic1.jpg');
+    background-size: 510px;
+}
+#pic2 {
+    height: 400px;
+    background-image: url('../img/pic/pic2.jpg');
+    background-size: 510px;
+}
+#pic3 {
+    height: 400px;
+    background-image: url('../img/pic/pic3.jpg');
+    background-size: 510px;
+}
+#pic4 {
+    height: 400px;
+    background-image: url('../img/pic/pic4.jpg');
+    background-size: 510px;
+}
+#pic5 {
+    height: 400px;
+    background-image: url('../img/pic/pic5.jpg');
+    background-size: 510px;
+}
+#pic6 {
+    height: 400px;
+    background-image: url('../img/pic/pic6.jpg');
+    background-size: 510px;
 }
