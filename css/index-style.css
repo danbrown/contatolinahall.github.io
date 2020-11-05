@@ -6,22 +6,28 @@
     text-align:center; 
     font-size: 10em; 
     letter-spacing: 0.2em; 
-    padding-top: 30%; 
-    color: #2F2E2E
+    color: #2F2E2E;
+
+    padding-top: 500px;
+    width: 90%;
+    padding-left: 10%;
 }
 #subtitle {
+    font-size: 3em;
     font-family: belleza; 
     text-align:center; 
-    color: #8C0B0B;
+    color: black;
+    /*color: #8C0B0B;*/
 }
 #sobremim {
-    border-bottom: solid 9px #6B2D7F;
-    background-color: #6B2D7F;
+    /*border-bottom: solid 9px #6B2D7F;*/
+    background-image: url('../img/sobremim-background.jpg');
+    /*background-color: #6B2D7F;*/
 }
 .sobremim-box {
-    border-top: solid 8px #6B2D7F;
+    /*border-top: solid 8px #6B2D7F;*/
     height: 580px;
-    background-color: #6B2D7F;
+    /*background-color: #6B2D7F;*/
     padding: 0;
 }
 #sobremim-left {
@@ -33,26 +39,28 @@
     width: 100%;
 }
 #sobremim-left-inner-box {
-    border: 13px solid #8C0B0B;
+    border: 13px solid #351740;
     margin-top: 10%;
     margin-right: 5%;
     width: 80%;
     float: right;
     height: 400px;
+    padding-right: 5%;
 }
 #sobremim-title {
     font-family: 'Passion One';
-    color: white;
+    color: black;
     text-align: right;
     font-size: 4.7em;
 }
 #sobremim-text {
-    font-family: 'arial';
-    color: white;
-    margin: 20% 10% 0 10%;
+    font-family: 'Passion One';
+    font-size: 1.4em;
+    color: black;
+    margin: 10% 10% 0 10%;
 }
 #acessaratwitch {
-    margin-top: 30%;
+    /* margin-top: 10%; */
     margin-left: 10%;
 }
 #squarebtn {
@@ -73,6 +81,23 @@
     font-size: 5em;
     font-family: "Passion one";
     letter-spacing: 0.1em;
+    text-color: white;
+}
+a:link
+{
+    color: white;
+}
+a:visited 
+{
+    color: white;
+}
+a:hover
+{
+    color: white;
+}
+a:active 
+{
+    color: white;
 }
 @media only screen and (max-width: 770px) {
   #squarebtn-text {
@@ -112,4 +137,21 @@
     height: 400px;
     background-image: url('../img/pic/pic6.jpg');
     background-size: 510px;
+}
+#footer {
+    background-image: url('../img/contato.jpg');
+}
+#contato-title {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    margin: 50px 35% 50px 35%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: "Passion One";
+    letter-spacing: 0.1em;
+    width: 30%;
+    text-align: center;
+}
+#contato-left {
+    text-align: center;
 }
