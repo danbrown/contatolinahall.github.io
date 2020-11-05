@@ -31,7 +31,7 @@
     padding: 0;
 }
 #sobremim-left {
-    background-image: url('../img/sobremim.png');
+    background-image: url('../img/sobremim2.png');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 250px;
@@ -108,35 +108,38 @@ a:active
 #parallax2 {
     height: 800px;
 }
+.pic {
+    width:33.33%;
+}
 #pic1 {
     height: 400px;
     background-image: url('../img/pic/pic1.jpg');
-    background-size: 510px;
+    background-size: 100%;
 }
 #pic2 {
     height: 400px;
     background-image: url('../img/pic/pic2.jpg');
-    background-size: 510px;
+    background-size: 100%;
 }
 #pic3 {
     height: 400px;
     background-image: url('../img/pic/pic3.jpg');
-    background-size: 510px;
+    background-size: 100%;
 }
 #pic4 {
     height: 400px;
     background-image: url('../img/pic/pic4.jpg');
-    background-size: 510px;
+    background-size: 100%;
 }
 #pic5 {
     height: 400px;
     background-image: url('../img/pic/pic5.jpg');
-    background-size: 510px;
+    background-size: 100%;
 }
 #pic6 {
     height: 400px;
     background-image: url('../img/pic/pic6.jpg');
-    background-size: 510px;
+    background-size: 100%;
 }
 #footer {
     background-image: url('../img/contato.jpg');
