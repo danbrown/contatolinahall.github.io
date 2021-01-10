@@ -1,3 +1,9 @@
+.navbar {
+    background-color: rgba(255,255,255,0.8);
+}
+.nav-item {
+   font-weight: bold;
+}
 .parallax-window {
     height: 1000px;
 }
@@ -7,8 +13,8 @@
     font-size: 10em; 
     letter-spacing: 0.2em; 
     color: #2F2E2E;
-
     padding-top: 500px;
+    /*padding-top: 50px; with logo*/
     width: 90%;
     padding-left: 10%;
 }
@@ -16,54 +22,46 @@
     font-size: 3em;
     font-family: belleza; 
     text-align:center; 
-    color: black;
-    /*color: #8C0B0B;*/
+    color: #6B2D7F;
 }
-#sobremim {
-    /*border-bottom: solid 9px #6B2D7F;*/
-    background-image: url('../img/sobremim-background.jpg');
-    background-size: 100% 580px;
-    /*background-color: #6B2D7F;*/
+@media screen and (min-width: 700px) {
+  #sobrelina-pc {
+    display: block;
+  }
+  #sobrelina-cel {
+    display:none;
+  }
+  #acessaratwitch {
+    top:85%;
+    margin-left: 15%;
+    width: 20%;
+  }
 }
-.sobremim-box {
-    /*border-top: solid 8px #6B2D7F;*/
-    height: 580px;
-    /*background-color: #6B2D7F;*/
-    padding: 0;
+@media screen and (max-width: 700px) {
+  #sobrelina-pc {
+    display: none;
+  }
+  #sobrelina-cel {
+    display:block;
+  }
+  #acessaratwitch {
+    top:90%;
+    margin-left: 35%;
+    width: 30%;
+  }
 }
-#sobremim-left {
-    background-image: url('../img/sobremim2.png');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: 290px;
-    /*background-size: 250px;*/
-    height: 581px;
+#sobrelina-cel {
     width: 100%;
 }
-#sobremim-left-inner-box {
-    border: 13px solid #351740;
-    margin-top: 10%;
-    margin-right: 5%;
-    width: 80%;
-    float: right;
-    height: 400px;
-    padding-right: 5%;
+#sobrelina-pc {
+    width: 100%;
 }
-#sobremim-title {
-    font-family: 'Passion One';
-    color: black;
-    text-align: right;
-    font-size: 4.7em;
-}
-#sobremim-text {
-    font-family: 'Passion One';
-    font-size: 1.35em;
-    color: black;
-    margin: 10% 10% 0 10%;
+#sobrelina {
+    position:relative;
 }
 #acessaratwitch {
-    /* margin-top: 10%; */
-    margin-left: 10%;
+    position:absolute;
+    font-size: 1em;
 }
 #squarebtn {
     border: solid 10px white;
@@ -159,4 +157,20 @@ a:active
 }
 #contato-left {
     text-align: center;
+}
+#logo {
+    margin-left: 45%;
+    height: 100px;
+}
+
+.parcerias {
+    background-image: url('../img/fundonovo.png');
+    background-size: 100%;
+    height: 400px;
+    margin-top:55px;
+}
+.naotenhoparcerias {
+    margin: 50px 35% 50px 35%;
+    text-align: center;
+    padding-top: 50px;
 }
