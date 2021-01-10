@@ -5,8 +5,36 @@
    font-weight: bold;
 }
 .parallax-window {
-    /* height: 1000px; */
     height: 120vh;
+}
+
+#banner-pc {
+    height: 120vh;
+}
+#banner-cel {
+    height: 0;
+}
+.hide-at-pc {
+    display: none;
+}
+.hide-at-cel {
+    display: block;
+}
+
+/* FOR SMARTPHONE */
+@media only screen and (max-width: 1000px) {
+    #banner-pc {
+        height: 0;
+    }
+    #banner-cel {
+        height: 120vh;
+    }
+    .hide-at-pc {
+        display: block;
+    }
+    .hide-at-cel {
+        display: none;
+    }
 }
 #linahall {
     font-family: 'Passion One'; 
@@ -44,7 +72,7 @@
     display: block;
 }
 #sobrelina-cel {
-    display:none;
+    display: none;
 }
 #acessaratwitch {
     top:80%;
