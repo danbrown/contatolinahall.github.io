@@ -25,32 +25,7 @@
     text-align:center; 
     color: #6B2D7F;
 }
-/*@media screen and (min-width: 800px) {*/
-  #sobrelina-pc {
-    display: block;
-  }
-  #sobrelina-cel {
-    display:none;
-  }
-  #acessaratwitch {
-    top:85%;
-    margin-left: 15%;
-    width: 20%;
-  }
-/*}*/
-@media screen and (max-width: 800px) {
-  #sobrelina-pc {
-    display: none;
-  }
-  #sobrelina-cel {
-    display:block;
-  }
-  #acessaratwitch {
-    top:90%;
-    margin-left: 35%;
-    width: 30%;
-  }
-}
+/* FOR EVERY SCREEN */
 #sobrelina-cel {
     width: 100%;
 }
@@ -63,6 +38,32 @@
 #acessaratwitch {
     position:absolute;
     font-size: 1em;
+}
+/* FOR PC */
+#sobrelina-pc {
+    display: block;
+}
+#sobrelina-cel {
+    display:none;
+}
+#acessaratwitch {
+    top:80%;
+    margin-left: 15%;
+    width: 20%;
+}
+/* FOR SMARTPHONE */
+@media screen and (max-width: 900px) {
+    #sobrelina-pc {
+        display: none;
+    }
+    #sobrelina-cel {
+        display:block;
+    }
+    #acessaratwitch {
+        top: 90%;
+        margin-left: 35%;
+        width: 30%;
+    }
 }
 #squarebtn {
     border: solid 10px white;
