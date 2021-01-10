@@ -5,7 +5,8 @@
    font-weight: bold;
 }
 .parallax-window {
-    height: 1000px;
+    /* height: 1000px; */
+    height: 120vh;
 }
 #linahall {
     font-family: 'Passion One'; 
@@ -13,8 +14,8 @@
     font-size: 10em; 
     letter-spacing: 0.2em; 
     color: #2F2E2E;
-    padding-top: 500px;
-    /*padding-top: 50px; with logo*/
+    /* padding-top: 500px; */
+    padding-top: 60vh;
     width: 90%;
     padding-left: 10%;
 }
@@ -24,7 +25,7 @@
     text-align:center; 
     color: #6B2D7F;
 }
-@media screen and (min-width: 800px) {
+/*@media screen and (min-width: 800px) {*/
   #sobrelina-pc {
     display: block;
   }
@@ -36,7 +37,7 @@
     margin-left: 15%;
     width: 20%;
   }
-}
+/*}*/
 @media screen and (max-width: 800px) {
   #sobrelina-pc {
     display: none;
