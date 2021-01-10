@@ -52,7 +52,7 @@
     width: 20%;
 }
 /* FOR SMARTPHONE */
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
     #sobrelina-pc {
         display: none;
     }
