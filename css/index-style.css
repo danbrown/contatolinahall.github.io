@@ -140,6 +140,7 @@ a:active
 }
 .pic {
     width:33.33%;
+    max-height: calc(100vw/3);
 }
 #pic1 {
     height: 400px;
