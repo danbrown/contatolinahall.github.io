@@ -186,14 +186,28 @@ a:active
     width: 30%;
     text-align: center;
 }
-#contato-left {
+.icon-bot {
+    margin-left: 8px;
+}
+#textos-footer-left {
+    text-align: left;
+    margin-left: 27%;
+}
+#middle-column-footer {
     text-align: center;
 }
-#logo {
-    margin-left: 45%;
-    height: 100px;
+#direct-contato {
+    text-align: left;
+    margin-left: 30%;
 }
-
+#logo {
+    margin-left: 0%;
+    height: 40px;
+    text-align: center;
+}
+#postal {
+    margin-left: 20%;
+}
 .parcerias {
     background-image: url('../img/fundonovo.png');
     background-size: 100%;
