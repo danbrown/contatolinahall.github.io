@@ -1,0 +1,220 @@
+.navbar {
+    background-color: rgba(255,255,255,0.8);
+}
+.nav-item {
+   font-weight: bold;
+}
+.parallax-window {
+    height: 120vh;
+}
+
+#banner-pc {
+    height: 120vh;
+}
+#banner-cel {
+    height: 0;
+}
+.hide-at-pc {
+    display: none;
+}
+.hide-at-cel {
+    display: block;
+}
+
+/* FOR SMARTPHONE */
+@media only screen and (max-width: 1000px) {
+    #banner-pc {
+        height: 0;
+    }
+    #banner-cel {
+        height: 120vh;
+    }
+    .hide-at-pc {
+        display: block;
+    }
+    .hide-at-cel {
+        display: none;
+    }
+}
+#linahall {
+    font-family: 'Passion One'; 
+    text-align:center; 
+    font-size: 10em; 
+    letter-spacing: 0.2em; 
+    color: #2F2E2E;
+    /* padding-top: 500px; */
+    padding-top: 60vh;
+    width: 90%;
+    padding-left: 10%;
+}
+#subtitle {
+    font-size: 3em;
+    font-family: belleza; 
+    text-align:center; 
+    color: #6B2D7F;
+}
+/* FOR EVERY SCREEN */
+#sobrelina-cel {
+    width: 100%;
+}
+#sobrelina-pc {
+    width: 100%;
+}
+#sobrelina {
+    position:relative;
+}
+#acessaratwitch {
+    position:absolute;
+    font-size: 1em;
+}
+/* FOR PC */
+#sobrelina-pc {
+    display: block;
+}
+#sobrelina-cel {
+    display: none;
+}
+#acessaratwitch {
+    top:80%;
+    margin-left: 15%;
+    width: 20%;
+}
+/* FOR SMARTPHONE */
+@media only screen and (max-width: 1000px) {
+    #sobrelina-pc {
+        display: none;
+    }
+    #sobrelina-cel {
+        display:block;
+    }
+    #acessaratwitch {
+        top: 90%;
+        margin-left: 35%;
+        width: 30%;
+    }
+}
+#squarebtn {
+    border: solid 10px white;
+    color: white;
+    height: 120px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #6B2D7F;
+    transition:0.5s;
+}
+#squarebtn:hover {
+    background-color: transparent;
+}
+#squarebtn-text {
+    font-size: 5em;
+    font-family: "Passion one";
+    letter-spacing: 0.1em;
+    text-color: white;
+}
+a:link
+{
+    color: white;
+}
+a:visited 
+{
+    color: white;
+}
+a:hover
+{
+    color: white;
+}
+a:active 
+{
+    color: white;
+}
+@media only screen and (max-width: 770px) {
+  #squarebtn-text {
+    padding-top: 20px;
+    font-size: 3em;
+  }
+}
+#parallax2 {
+    height: 800px;
+}
+.pic {
+    width:33.33%;
+    max-height: calc(100vw/3);
+}
+#pic1 {
+    height: 400px;
+    background-image: url('../img/pic/pic1.jpg');
+    background-size: 100%;
+}
+#pic2 {
+    height: 400px;
+    background-image: url('../img/pic/pic2.jpg');
+    background-size: 100%;
+}
+#pic3 {
+    height: 400px;
+    background-image: url('../img/pic/pic3.jpg');
+    background-size: 100%;
+}
+#pic4 {
+    height: 400px;
+    background-image: url('../img/pic/pic4.jpg');
+    background-size: 100%;
+}
+#pic5 {
+    height: 400px;
+    background-image: url('../img/pic/pic5.jpg');
+    background-size: 100%;
+}
+#pic6 {
+    height: 400px;
+    background-image: url('../img/pic/pic6.jpg');
+    background-size: 100%;
+}
+#footer {
+    background-image: url('../img/contato.jpg');
+}
+#contato-title {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    margin: 50px 35% 50px 35%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: "Passion One";
+    letter-spacing: 0.1em;
+    width: 30%;
+    text-align: center;
+}
+.icon-bot {
+    margin-left: 8px;
+}
+#textos-footer-left {
+    text-align: left;
+    margin-left: 27%;
+}
+#middle-column-footer {
+    text-align: center;
+}
+#direct-contato {
+    text-align: center;
+}
+#logo {
+    margin-left: 0%;
+    height: 40px;
+    text-align: center;
+}
+#postal {
+    margin-left: 20%;
+}
+.parcerias {
+    background-image: url('../img/fundonovo.png');
+    background-size: 100%;
+    height: 400px;
+    margin-top:55px;
+}
+.naotenhoparcerias {
+    margin: 50px 35% 50px 35%;
+    text-align: center;
+    padding-top: 50px;
+}
