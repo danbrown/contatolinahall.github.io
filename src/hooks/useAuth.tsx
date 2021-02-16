@@ -4,7 +4,7 @@ import { api } from "@services";
 
 const AuthContext = createContext<any>({});
 
-export function AuthProvider({ children }) {
+export function AuthProvider({ children }: { children: any }) {
   const [authenticated, setAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
   const [sessionUser, setSessionUser] = useState({});
@@ -34,7 +34,11 @@ export function AuthProvider({ children }) {
     })();
   }, []);
 
-  async function handleLogin(identifier, password, path = "/dashboard") {
+  async function handleLogin(
+    identifier: any,
+    password: any,
+    path = "/dashboard"
+  ) {
     const response = await api.post("auth/local", {
       identifier,
       password,
@@ -49,7 +53,7 @@ export function AuthProvider({ children }) {
     // router.push(path);
   }
 
-  async function handleSignUp(userData, path = "/dashboard") {
+  async function handleSignUp(userData: any, path = "/dashboard") {
     // await api
     //   .post("/users", userData)
     //   .then((result) => {
