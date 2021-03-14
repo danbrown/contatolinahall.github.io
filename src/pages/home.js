@@ -1,7 +1,22 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Button, Input, TextField } from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// + UTILS
+import debounce from "../utils/debounce";
+
+// + STYLESHEETS
 import linastyles from "../styles/Linahall.module.css";
 import parallelstyles from "../styles/Parallel.module.css";
+const buttonStyles = {
+  margin: 0,
+  marginTop: 10,
+  marginBottom: 10,
+  backgroundColor: "#85367eaa",
+  padding: "25px 150px 25px 25px",
+  fontSize: 20,
+};
 
 export default function Hello() {
   // body
@@ -46,7 +61,7 @@ export default function Hello() {
             : setSectionIndex(1)
           : sectionIndex > 1
           ? setSectionIndex(sectionIndex - 1)
-          : setSectionIndex(sectionNumber);
+          : "";
 
         e.deltaY > 0 ? setScrollE(1) : setScrollE(-1);
         console.log(e.deltaY);
@@ -96,6 +111,8 @@ export default function Hello() {
       <section id="intro-section" className={parallelstyles.section}>
         <div className={[parallelstyles.imageWrapper]} style={insection(1)}>
           <br />
+          <br />
+          <br />
 
           <WebsiteTitle />
 
@@ -103,26 +120,175 @@ export default function Hello() {
 
           <HomeNavigator setSection={setSectionIndex} />
           <br />
-          <br />
         </div>
         <div className={parallelstyles.contentWrapper} style={tosection(1)}>
           <Image src="/img/sobremim2.png" layout="fill" objectFit="contain" />
         </div>
       </section>
 
-      <section id="intro-section" className={parallelstyles.section}>
-        <div className={parallelstyles.imageWrapper} style={insection(2)}>
-          sou 2
+      <section className={parallelstyles.section}>
+        <div
+          id={linastyles.gallery}
+          className={parallelstyles.imageWrapper}
+          style={insection(2)}
+        >
+          <div className={linastyles.column}>
+            <div className={linastyles.row_stretch}>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/pic1.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/pic4.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/pic3.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className={linastyles.row_stretch}>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/danFight.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/linaBanho.png"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/danRun.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className={linastyles.row_stretch}>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/soraka.png"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/caina.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/danOld.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className={parallelstyles.contentWrapper} style={tosection(2)}>
-          sou 2
+          <div className={linastyles.column}>
+            <h2 className={linastyles.default_title}>Sobre Mim</h2>
+            <span className={linastyles.divider}></span>
+            <p className={linastyles.default_text}>
+              Me chamo <b>Lina Hall</b>, tenho 21 anos e moro em Florianópolis.
+              Sou estudante de moda,{" "}
+              <b>
+                Cosplayer, Streamer, Influencer, criadora de conteúdo e Modelo
+              </b>
+              . Amo a vida em movimento. Games, teatro e dança são as minhas
+              paixões. Assim como toda a minha <b>comunidade</b> que me
+              incentiva a sempre reinventar.
+            </p>
+            <span className={linastyles.divider}></span>
+            <br />
+            <br />
+            <iframe
+              src="https://player.twitch.tv/?video=933809602&parent=localhost&autoplay=false"
+              height="400"
+              width="100%"
+              autoplay="false"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
         </div>
       </section>
 
       <section id="intro-section" className={parallelstyles.section}>
         <div className={parallelstyles.imageWrapper} style={insection(3)}>
-          <a href="#anchor1">Games</a>
-          <a href="#anchor2">Clipes</a>
+          <div className={linastyles.column}>
+            <h2 className={linastyles.default_title}>Conteúdo</h2>
+            <span className={linastyles.divider}></span>
+            <div className={linastyles.row}>
+              <a
+                class="btn btn-3 btn-3e icon-arrow-right"
+                style={buttonStyles}
+                href="https://www.twitch.tv/linahall/clips?filter=clips&range=7d"
+                target="_blank"
+              >
+                Clipes
+              </a>
+              <a
+                class="btn btn-3 btn-3e icon-arrow-right"
+                style={buttonStyles}
+                href="#anchor2"
+              >
+                Games
+              </a>
+              <a
+                class="btn btn-3 btn-3e icon-arrow-right"
+                style={buttonStyles}
+                href="#anchor2"
+              >
+                Fotos
+              </a>
+            </div>
+            <br />
+            <br />
+
+            <h2 className={linastyles.default_title}>Redes Sociais</h2>
+            <span className={linastyles.divider}></span>
+            <SocialBar />
+          </div>
         </div>
         <div className={parallelstyles.contentWrapper} style={tosection(3)}>
           <div id="anchor1">
@@ -366,10 +532,47 @@ export default function Hello() {
 
       <section id="intro-section" className={parallelstyles.section}>
         <div className={parallelstyles.imageWrapper} style={insection(4)}>
-          sou 4
+          <Image
+            src="/img/btns-background.jpg"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
         <div className={parallelstyles.contentWrapper} style={tosection(4)}>
-          sou 4
+          <div className={linastyles.column}>
+            <h2 className={linastyles.default_title}>Contato</h2>
+            <span className={linastyles.divider}></span>
+            <p className={linastyles.default_text}>
+              Para envio de <b>midia kit, parcerias e afins</b>.
+              <br />
+              <b>Email:</b>{" "}
+              <a
+                href="mailto:contato.linahall@gmail.com"
+                className={linastyles.link}
+              >
+                contato.linahall@gmail.com
+              </a>
+            </p>
+            <br />
+            <div className={linastyles.row}>
+              <p className={linastyles.default_text}>
+                Caixa Postal: 13025
+                <br /> CEP: 88010-975
+                <br />
+                Agência: AGF
+                <br />
+                Rua Álvaro de Carvalho
+                <br />
+                Florianópolis - SC
+              </p>
+              <img
+                src="/img/L.png"
+                className={linastyles.anim_banana_only}
+                alt=""
+              />
+            </div>
+          </div>
+          <SocialBar />
         </div>
       </section>
     </section>
@@ -384,8 +587,8 @@ const VideoBackground = () => {
         top: 0,
         overflow: "hidden",
         left: 0,
-        minWidth: "100vw",
-        minHeight: "100vh",
+        minWidth: "100%",
+        minHeight: "100%",
       }}
     >
       <Image src="/img/contato.jpg" layout="fill" objectFit="cover" />
@@ -424,7 +627,9 @@ const WebsiteTitle = () => {
           alt=""
         />
         <img src="/img/linahall.png" style={{ maxWidth: "100%" }} alt="" />
-        <h1>streamer • criadora de conteúdo • cosplayer</h1>
+        <h1 className={linastyles.subtitle}>
+          streamer • criadora de conteúdo • cosplayer
+        </h1>
       </a>
     </div>
   );
@@ -432,24 +637,25 @@ const WebsiteTitle = () => {
 
 const HomeNavigator = (props) => {
   const { setSection } = props;
+
+  const styles = {
+    margin: 0,
+    marginTop: 10,
+    marginBottom: 10,
+    backgroundColor: "#85367eaa",
+    padding: "25px 150px 25px 25px",
+    fontSize: 20,
+  };
+
   return (
     <div className={linastyles.home_navigator}>
-      <button
-        className={linastyles.navbutton}
-        onClick={() => {
-          setSection(1);
-        }}
-      >
-        Sobre Mim
-      </button>
-
       <button
         className={linastyles.navbutton}
         onClick={() => {
           setSection(2);
         }}
       >
-        Parceiros
+        Sobre Mim
       </button>
 
       <button
@@ -464,7 +670,7 @@ const HomeNavigator = (props) => {
       <button
         className={linastyles.navbutton}
         onClick={() => {
-          setSection(4);
+          setSection(3);
         }}
       >
         Redes Sociais
@@ -473,36 +679,127 @@ const HomeNavigator = (props) => {
       <button
         className={linastyles.navbutton}
         onClick={() => {
-          setSection(3);
-        }}
-      >
-        Contato
-      </button>
-
-      <button
-        className={linastyles.navbutton}
-        onClick={() => {
-          setSection(3);
+          setSection(4);
         }}
       >
         Media Kit
+      </button>
+      <button
+        className={linastyles.navbutton}
+        onClick={() => {
+          setSection(4);
+        }}
+      >
+        Parcerias
+      </button>
+      <button
+        class="btn btn-3 btn-3e icon-arrow-right"
+        style={styles}
+        onClick={() => {
+          setSection(4);
+        }}
+      >
+        Entre em Contato
       </button>
     </div>
   );
 };
 
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
-    var later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
+function SocialBar(props) {
+  const { color = "#7a007daa" } = props;
+
+  return (
+    <div className={linastyles.row}>
+      <Button
+        style={{
+          borderRadius: 150,
+          padding: "16px 20px",
+          margin: 5,
+          borderColor: color,
+          borderWidth: 4,
+        }}
+        variant="outlined"
+        component={"a"}
+        href="https://www.tiktok.com/@linahallstream?lang=pt-BR"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={["fab", "instagram"]} size="4x" color={color} />
+      </Button>
+      <Button
+        style={{
+          borderRadius: 150,
+          padding: "16px 20px",
+          margin: 5,
+          borderColor: color,
+          borderWidth: 4,
+        }}
+        variant="outlined"
+        component={"a"}
+        href="https://www.tiktok.com/@linahallstream?lang=pt-BR"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={["fab", "twitch"]} size="4x" color={color} />
+      </Button>
+      <Button
+        style={{
+          borderRadius: 150,
+          padding: "16px 20px",
+          margin: 5,
+          borderColor: color,
+          borderWidth: 4,
+        }}
+        variant="outlined"
+        component={"a"}
+        href="https://www.tiktok.com/@linahallstream?lang=pt-BR"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={["fab", "tiktok"]} size="4x" color={color} />
+      </Button>
+      <Button
+        style={{
+          borderRadius: 150,
+          padding: "16px 20px",
+          margin: 5,
+          borderColor: color,
+          borderWidth: 4,
+        }}
+        variant="outlined"
+        component={"a"}
+        href="https://www.tiktok.com/@linahallstream?lang=pt-BR"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={["fab", "twitter"]} size="4x" color={color} />
+      </Button>
+      <Button
+        style={{
+          borderRadius: 150,
+          padding: "16px 20px",
+          margin: 5,
+          borderColor: color,
+          borderWidth: 4,
+        }}
+        variant="outlined"
+        component={"a"}
+        href="https://www.tiktok.com/@linahallstream?lang=pt-BR"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={["fab", "youtube"]} size="4x" color={color} />
+      </Button>
+      <Button
+        style={{
+          borderRadius: 150,
+          padding: "16px 20px",
+          margin: 5,
+          borderColor: color,
+          borderWidth: 4,
+        }}
+        variant="outlined"
+        component={"a"}
+        href="https://www.tiktok.com/@linahallstream?lang=pt-BR"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={["fab", "discord"]} size="4x" color={color} />
+      </Button>
+    </div>
+  );
 }
