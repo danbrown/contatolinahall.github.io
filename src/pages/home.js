@@ -6,6 +6,7 @@ import axios from "axios";
 import { Button, Input, TextField } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 // + UTILS
 import debounce from "../utils/debounce";
@@ -115,6 +116,9 @@ export default function Hello() {
 
   return (
     <section>
+      <Head>
+        <title>Lina Hall - Streamer • Criadora de Conteúdo • Cosplayer</title>
+      </Head>
       <nav className={parallelstyles.navigator}>
         <div>index: {sectionIndex} &nbsp;| &nbsp;</div>
         <div>scroll: {scrollE}</div>
