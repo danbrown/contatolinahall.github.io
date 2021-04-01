@@ -6,10 +6,10 @@ import typography from "./typography";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#556cd6",
+      main: "#7a007d",
     },
     secondary: {
-      main: "#19857b",
+      main: "#7a007d",
     },
     error: {
       main: colors.red.A400,
