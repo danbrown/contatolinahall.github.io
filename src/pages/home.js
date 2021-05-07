@@ -7,10 +7,12 @@ import { Button, Input, TextField } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Loading from "../components/Loading";
 
 // + UTILS
 import debounce from "../utils/debounce";
 import fetch from "isomorphic-fetch";
+const debug = false;
 
 // + STYLESHEETS
 import linastyles from "../styles/Linahall.module.css";
@@ -26,6 +28,23 @@ const buttonStyles = {
 
 export default function Hello() {
   const Router = useRouter();
+
+  // loading
+  const [loading, setLoading] = useState(true);
+  const [opacity, setOpacity] = useState(1);
+  useEffect(() => {
+    document.addEventListener("readystatechange", (event) => {
+      // When window loaded ( external resources are loaded too- `css`,`src`, etc...)
+      if (event.target.readyState === "complete") {
+        setTimeout(() => {
+          setOpacity(0);
+          setTimeout(() => {
+            setLoading(false);
+          }, 1000);
+        }, 2000);
+      }
+    });
+  }, [true]);
 
   // body
   useEffect(() => {
@@ -119,7 +138,13 @@ export default function Hello() {
       <Head>
         <title>Lina Hall - Streamer • Criadora de Conteúdo • Cosplayer</title>
       </Head>
-      <nav className={parallelstyles.navigator}>
+
+      {loading && <Loading opacity={opacity} />}
+
+      <nav
+        className={parallelstyles.navigator}
+        style={{ display: debug ? "flex" : "none" }}
+      >
         <div>index: {sectionIndex} &nbsp;| &nbsp;</div>
         <div>scroll: {scrollE}</div>
       </nav>
@@ -290,8 +315,8 @@ export default function Hello() {
               src="https://player.twitch.tv/?video=933809602&parent=linahall.tk&autoplay=false"
               height="400"
               width="100%"
-              autoplay="false"
-              allowfullscreen="true"
+              autoPlay={false}
+              allowFullScreen={true}
             ></iframe>
           </div>
         </div>
@@ -308,7 +333,7 @@ export default function Hello() {
             <span className={linastyles.divider}></span>
             <div className={linastyles.row}>
               <a
-                class="btn btn-3 btn-3e icon-arrow-right"
+                className="btn btn-3 btn-3e icon-arrow-right"
                 style={buttonStyles}
                 href="https://www.twitch.tv/linahall/clips?filter=clips&range=7d"
                 target="_blank"
@@ -316,7 +341,7 @@ export default function Hello() {
                 Clipes
               </a>
               <a
-                class="btn btn-3 btn-3e icon-arrow-right"
+                className="btn btn-3 btn-3e icon-arrow-right"
                 style={buttonStyles}
                 href="https://trello.com/b/ZoS7vvlX/nossa-coleção"
                 target="_blank"
@@ -324,7 +349,7 @@ export default function Hello() {
                 Games
               </a>
               <a
-                class="btn btn-3 btn-3e icon-arrow-right"
+                className="btn btn-3 btn-3e icon-arrow-right"
                 style={buttonStyles}
                 href="https://www.instagram.com/linahallstream/"
                 target="_blank"
@@ -555,7 +580,7 @@ const HomeNavigator = (props) => {
 
       <a href={width <= 1000 ? "#CONTATO" : "#"}>
         <button
-          class="btn btn-3 btn-3e icon-arrow-right"
+          className="btn btn-3 btn-3e icon-arrow-right"
           style={styles}
           onClick={() => {
             setSection(4);
