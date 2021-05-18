@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Loading from "../components/Loading";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 // + UTILS
 import debounce from "../utils/debounce";
@@ -149,7 +150,8 @@ export default function Hello() {
         <div>scroll: {scrollE}</div>
       </nav>
 
-      <VideoBackground />
+      {/* <VideoBackground /> */}
+      <AnimatedBackground />
 
       <section id="intro-section" className={parallelstyles.section}>
         <div className={[parallelstyles.contentWrapper]} style={insection(1)}>
