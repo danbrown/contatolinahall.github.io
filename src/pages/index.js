@@ -643,7 +643,7 @@ const HomeNavigator = (props) => {
             setSection(4);
           }}
         >
-          Media Kit
+          Mídia Kit
         </button>
       </a>
 
@@ -842,7 +842,7 @@ function ContactForm({ width }) {
         }) => (
           <form onSubmit={handleSubmit}>
             <p className={linastyles.default_text}>
-              Para envio de <b>midia kit, parcerias e afins</b>.
+              Para envio de <b>mídia kit, parcerias e afins</b>.
             </p>
             <div style={{}}>
               <TextField
