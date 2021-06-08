@@ -168,11 +168,7 @@ export default function Hello() {
         </div>
         <div className={parallelstyles.contentWrapper} style={tosection(1)}>
           {width >= 1000 ? (
-            <Image
-              src="/img/lina-home-novo.png"
-              layout="fill"
-              objectFit="contain"
-            />
+            <Image src="/img/live-on.png" layout="fill" objectFit="contain" />
           ) : (
             <div
               style={{
@@ -305,14 +301,12 @@ export default function Hello() {
             <h2 className={linastyles.default_title}>Sobre Mim</h2>
             <span className={linastyles.divider}></span>
             <p className={linastyles.default_text}>
-              Me chamo <b>Lina Hall</b>, tenho 21 anos e moro em Florianópolis.
-              Sou estudante de moda,{" "}
-              <b>
-                Cosplayer, Streamer, Influencer, criadora de conteúdo e Modelo
-              </b>
-              . Amo a vida em movimento. Games, teatro e dança são as minhas
-              paixões. Assim como toda a minha <b>comunidade</b> que me
-              incentiva a sempre reinventar.
+              Entretenimento garantido. Sou a <b>Lina Hall</b> e moro em
+              Florianópolis-SC uma criadora de conteúdo de jogos e podcasts
+              relacionados ao <b>universo geek, fashion e e-sports</b>. Gosto de
+              trazer novidades, conhecimento, e procuro um dia me tornar
+              referencia nesse meio, inspirando toda a minha <b>comunidade</b>{" "}
+              que me incentiva a sempre reinventar.
             </p>
             <span className={linastyles.divider}></span>
             <br />
@@ -365,6 +359,9 @@ export default function Hello() {
             </div>
             <br />
             <br />
+            <br />
+            <br />
+            <br />
 
             <h2 className={linastyles.default_title}>Redes Sociais</h2>
             <span className={linastyles.divider}></span>
@@ -377,7 +374,11 @@ export default function Hello() {
           style={tosection(3)}
         >
           {width >= 1000 ? (
-            <Image src="/img/banner-cel.jpg" layout="fill" objectFit="cover" />
+            <Image
+              src="/img/lina-conteudo-novo.jpg"
+              layout="fill"
+              objectFit="cover"
+            />
           ) : (
             <div
               style={{
@@ -403,7 +404,7 @@ export default function Hello() {
         <div className={parallelstyles.imageWrapper} style={insection(4)}>
           {width >= 1000 ? (
             <Image
-              src="/img/lina-blacknwhite.jpg"
+              src="/img/lina-blacknwhite2.jpg"
               layout="fill"
               objectFit="cover"
             />
@@ -451,8 +452,12 @@ export default function Hello() {
               </p>
               <img src="/img/L.png" style={{ width: 100 }} alt="" />
             </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <ContactForm width={width} />
           </div>
-          <ContactForm width={width} />
         </div>
       </section>
     </section>
@@ -668,6 +673,21 @@ function SocialBar(props) {
         target="_blank"
       >
         <FontAwesomeIcon icon={["fab", "youtube"]} size="3x" color={color} />
+      </Button>
+      <Button
+        style={{
+          borderRadius: 150,
+          padding: "16px 20px",
+          margin: 5,
+          borderColor: color,
+          borderWidth: 4,
+        }}
+        variant="outlined"
+        component={"a"}
+        href="https://www.linkedin.com/in/linahallstream/"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" color={color} />
       </Button>
       <Button
         style={{

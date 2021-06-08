@@ -17,6 +17,7 @@ import {
   faTiktok,
   faDiscord,
   faYoutube,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
 
@@ -33,6 +34,7 @@ library.add(
   faYoutube,
   faBars,
   faTimes,
+  faLinkedin,
   faCheck
 );
 

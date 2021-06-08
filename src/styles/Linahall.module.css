@@ -15,6 +15,10 @@
   }
 }
 
+.logo_title {
+  font-family: "Michroma", sans-serif;
+}
+
 .image_bg {
   min-width: 100%;
   min-height: 100%;
@@ -65,11 +69,14 @@
 }
 
 .subtitle {
-  font-size: 35px;
+  margin-top: 15px;
+  font-size: 25px;
   text-align: center;
   color: #7a007d;
-  font-family: belleza;
+  font-family: "Gruppo", sans-serif;
   transition: 0.5s ease;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .subtitle:hover {
@@ -77,12 +84,14 @@
 }
 
 .default_title {
-  font-size: 95px;
+  font-size: 75px;
+  text-transform: uppercase;
   text-align: center;
-  font-family: belleza;
+  font-family: "Gruppo", sans-serif;
   color: #000;
-  font-weight: 700;
+  font-weight: 300;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .default_text {
@@ -111,15 +120,15 @@
   background-color: transparent;
   font-size: 30px;
   cursor: pointer;
-  color: #65007c;
+  color: #000;
   font-weight: 500;
   position: relative;
   margin-bottom: 20px;
-  padding: 0px 30px;
+  padding: 0px 20px;
   font-family: "Montserrat", sans-serif;
   transition: 0.3s ease;
-  border-left: 3px solid #65007c;
-  border-radius: 10px;
+  border-left: 3px solid #7a007d;
+  border-radius: 0px;
 }
 
 .navbutton:hover {
@@ -222,7 +231,7 @@
 }
 
 .formWrapper {
-  background-color: white;
+  background-color: #ffffff25;
   width: 100%;
   min-height: 100px;
   display: flex;
@@ -230,6 +239,10 @@
   justify-content: center;
   flex-direction: column;
   padding: 30px;
-  box-shadow: 0px 0px 15px #00000070;
+  box-shadow: 0px 0px 10px #00000050;
   z-index: 1;
+}
+
+.default_text_tiny {
+  font-family: "Montserrat", sans-serif;
 }
