@@ -22,7 +22,7 @@ const buttonStyles = {
   margin: 0,
   marginTop: 10,
   marginBottom: 10,
-  backgroundColor: "#85367eaa",
+  backgroundColor: "#65007c",
   padding: "25px 100px 25px 25px",
   fontSize: 16,
 };
@@ -168,7 +168,11 @@ export default function Hello() {
         </div>
         <div className={parallelstyles.contentWrapper} style={tosection(1)}>
           {width >= 1000 ? (
-            <Image src="/img/sobremim2.png" layout="fill" objectFit="contain" />
+            <Image
+              src="/img/lina-home-novo.png"
+              layout="fill"
+              objectFit="contain"
+            />
           ) : (
             <div
               style={{
@@ -475,7 +479,7 @@ const VideoBackground = () => {
         muted
         style={{
           position: "absolute",
-          opacity: 0.7,
+          opacity: 0.5,
           height: "150vh",
           left: 0,
           top: 0,
@@ -492,16 +496,6 @@ const WebsiteTitle = () => {
   return (
     <div className={linastyles.title_container}>
       <a href="/">
-        <img
-          src="/img/banana-glow.png"
-          className={linastyles.anim_banana_1}
-          alt=""
-        />
-        <img
-          src="/img/banana-glow.png"
-          className={linastyles.anim_banana_2}
-          alt=""
-        />
         <img src="/img/linahall.png" style={{ maxWidth: "100%" }} alt="" />
         <h1 className={linastyles.subtitle}>
           streamer • criadora de conteúdo • cosplayer
@@ -518,7 +512,7 @@ const HomeNavigator = (props) => {
     margin: 0,
     marginTop: 10,
     marginBottom: 10,
-    backgroundColor: "#85367eaa",
+    backgroundColor: "#65007c",
     padding: "25px 120px 25px 25px",
     fontSize: 20,
   };
@@ -596,7 +590,7 @@ const HomeNavigator = (props) => {
 };
 
 function SocialBar(props) {
-  const { color = "#7a007daa" } = props;
+  const { color = "#65007c" } = props;
 
   return (
     <div className={linastyles.row}>

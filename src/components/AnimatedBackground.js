@@ -154,7 +154,7 @@ export default function AnimatedBackground(props) {
             position: "absolute",
             top: 0,
             left: 0,
-            opacity: 0.1,
+            opacity: 0.05,
             width: "100%",
             height: "100%",
           }}
@@ -165,7 +165,7 @@ export default function AnimatedBackground(props) {
             position: "absolute",
             top: 0,
             left: 0,
-            opacity: 0.5,
+            opacity: 0.15,
             backgroundBlendMode: "multiply",
           }}
         ></div>

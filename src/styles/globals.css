@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #c172f4;
+}
+
 * {
   box-sizing: border-box;
 }
