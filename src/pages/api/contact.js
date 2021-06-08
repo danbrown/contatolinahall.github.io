@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const smtp_config = require("config/smtp");
+const smtp_config = require("../../config/smtp");
 
 const transporter = nodemailer.createTransport({
   host: smtp_config.host,
@@ -28,8 +28,13 @@ Email: ${email}
 ${message}
 `,
       subject: `[SITE] ${subject}`,
-      from: `${smtp_config.name} <docbrownmailer@gmail.com>`,
-      to: ["danielbrown25.9.2@gmail.com", email, smtp_config.user],
+      from: `${smtp_config.name} <${smtp_config.user}>`,
+      to: [
+        "danielbrown25.9.2@gmail.com",
+        "contato.linahall@gmail.com",
+        email,
+        smtp_config.user,
+      ],
     });
     console.log("====================================");
     console.log(mailSent);

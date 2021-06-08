@@ -22,6 +22,7 @@ const buttonStyles = {
   margin: 0,
   marginTop: 10,
   marginBottom: 10,
+  marginRight: 20,
   backgroundColor: "#65007c",
   padding: "25px 100px 25px 25px",
   fontSize: 16,
@@ -360,12 +361,39 @@ export default function Hello() {
             <br />
             <br />
             <br />
-            <br />
-            <br />
 
             <h2 className={linastyles.default_title}>Redes Sociais</h2>
             <span className={linastyles.divider}></span>
             <SocialBar />
+
+            <br />
+            <br />
+            <br />
+            <h2 className={linastyles.default_title}>Apoie meu Trabalho</h2>
+            <span className={linastyles.divider}></span>
+
+            <p className={linastyles.default_text}>
+              <b> Pix:</b>. contato.linahall@gmail.com
+            </p>
+
+            <div className={linastyles.row}>
+              <a
+                className="btn btn-3 btn-3e icon-arrow-right"
+                style={buttonStyles}
+                href="https://streamlabs.com/linahall/tip"
+                target="_blank"
+              >
+                Donate
+              </a>
+              <a
+                className="btn btn-3 btn-3e icon-arrow-right"
+                style={buttonStyles}
+                href="https://app.picpay.com/user/LinaHall"
+                target="_blank"
+              >
+                Picpay
+              </a>
+            </div>
           </div>
         </div>
         <div
@@ -374,11 +402,24 @@ export default function Hello() {
           style={tosection(3)}
         >
           {width >= 1000 ? (
-            <Image
-              src="/img/lina-conteudo-novo.jpg"
-              layout="fill"
-              objectFit="cover"
-            />
+            <div
+              style={{
+                minWidth: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
+                padding: 80,
+                position: "relative",
+                height: "100%",
+              }}
+            >
+              <Image
+                src="/img/lina-conteudo-novo.jpg"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           ) : (
             <div
               style={{
@@ -403,11 +444,24 @@ export default function Hello() {
       <section className={parallelstyles.section}>
         <div className={parallelstyles.imageWrapper} style={insection(4)}>
           {width >= 1000 ? (
-            <Image
-              src="/img/lina-blacknwhite2.jpg"
-              layout="fill"
-              objectFit="cover"
-            />
+            <div
+              style={{
+                minWidth: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
+                padding: 80,
+                position: "relative",
+                height: "100%",
+              }}
+            >
+              <Image
+                src="/img/lina-blacknwhite2.jpg"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           ) : (
             <div
               style={{
@@ -439,7 +493,10 @@ export default function Hello() {
               </a>
             </p>
 
-            <div className={linastyles.row}>
+            <div
+              className={linastyles.row}
+              style={{ justifyContent: "space-between" }}
+            >
               <p className={linastyles.default_text_tiny}>
                 Caixa Postal: 13025
                 <br /> CEP: 88010-975
