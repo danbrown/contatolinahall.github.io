@@ -213,7 +213,7 @@ export default function Hello() {
               <div className={linastyles.image_gallery_item_wrapper}>
                 <div className={linastyles.image_gallery_item}>
                   <Image
-                    src="/img/pic/pic4.jpg"
+                    src="/img/pic/pic2.jpg"
                     layout="fill"
                     objectFit="cover"
                   />
@@ -234,15 +234,6 @@ export default function Hello() {
               <div className={linastyles.image_gallery_item_wrapper}>
                 <div className={linastyles.image_gallery_item}>
                   <Image
-                    src="/img/pic/pic1.jpg"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              </div>
-              <div className={linastyles.image_gallery_item_wrapper}>
-                <div className={linastyles.image_gallery_item}>
-                  <Image
                     src="/img/pic/pic4.jpg"
                     layout="fill"
                     objectFit="cover"
@@ -252,7 +243,16 @@ export default function Hello() {
               <div className={linastyles.image_gallery_item_wrapper}>
                 <div className={linastyles.image_gallery_item}>
                   <Image
-                    src="/img/pic/pic3.jpg"
+                    src="/img/pic/pic5.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+              <div className={linastyles.image_gallery_item_wrapper}>
+                <div className={linastyles.image_gallery_item}>
+                  <Image
+                    src="/img/pic/pic6.jpg"
                     layout="fill"
                     objectFit="cover"
                   />
@@ -264,7 +264,7 @@ export default function Hello() {
               <div className={linastyles.image_gallery_item_wrapper}>
                 <div className={linastyles.image_gallery_item}>
                   <Image
-                    src="/img/pic/pic1.jpg"
+                    src="/img/pic/pic7.jpg"
                     layout="fill"
                     objectFit="cover"
                   />
@@ -273,7 +273,7 @@ export default function Hello() {
               <div className={linastyles.image_gallery_item_wrapper}>
                 <div className={linastyles.image_gallery_item}>
                   <Image
-                    src="/img/pic/pic4.jpg"
+                    src="/img/pic/pic8.jpg"
                     layout="fill"
                     objectFit="cover"
                   />
@@ -282,7 +282,7 @@ export default function Hello() {
               <div className={linastyles.image_gallery_item_wrapper}>
                 <div className={linastyles.image_gallery_item}>
                   <Image
-                    src="/img/pic/pic3.jpg"
+                    src="/img/pic/pic9.jpg"
                     layout="fill"
                     objectFit="cover"
                   />
@@ -312,7 +312,7 @@ export default function Hello() {
             <br />
             <br />
             <iframe
-              src="https://player.twitch.tv/?video=933809602&parent=linahall.tk&autoplay=false"
+              src="https://player.twitch.tv/?video=933809602&parent=linahall.com.br&autoplay=false"
               height="400"
               width="100%"
               autoPlay={false}
@@ -500,15 +500,94 @@ const VideoBackground = () => {
 const WebsiteTitle = () => {
   return (
     <div className={linastyles.title_container}>
-      <a href="/">
-        <img src="/img/linahall.png" style={{ maxWidth: "100%" }} alt="" />
-        <h1 className={linastyles.subtitle}>
-          streamer • criadora de conteúdo • cosplayer
-        </h1>
-      </a>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+        >
+          {/* <img
+            src="/img/L.png"
+            style={{
+              height: 120,
+              marginRight: 20,
+              marginLeft: -20,
+              marginBottom: 40,
+            }}
+            alt=""
+          /> */}
+        </div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+        >
+          <a
+            href="/"
+            style={{
+              width: "100%",
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
+            <img src="/img/linahall.png" style={{ maxWidth: "100%" }} alt="" />
+
+            {/* <h2 className={linastyles.logo_title}>LINA HALL</h2> */}
+
+            <h1 className={linastyles.subtitle}>
+              streamer • criadora de conteúdo • cosplayer
+            </h1>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
+
+// <div
+// style={{
+//   display: "flex",
+//   alignItems: "center",
+//   justifyContent: "center",
+//   flexDirection: "row",
+// }}
+// >
+// <div>
+//   <img
+//     src="/img/L.png"
+//     style={{ height: 120, marginRight: 20, marginLeft: -20 }}
+//     alt=""
+//   />
+// </div>
+// <div>
+//   <a href="/">
+//     { <img src="/img/linahall.png" style={{ maxWidth: "100%" }} alt="" />
+
+//     <h2 className={linastyles.logo_title}>LINA HALL</h2>
+
+//     <h1 className={linastyles.subtitle}>
+//       streamer • criadora de conteúdo • cosplayer
+//     </h1>
+//   </a>
+// </div>
+// </div>
 
 const HomeNavigator = (props) => {
   const { setSection, width } = props;
@@ -783,6 +862,7 @@ function ContactForm({ width }) {
                   width: width <= 1450 ? "100%" : "auto",
                 }}
               />
+
               <TextField
                 required
                 error={Boolean(touched.subject && errors.subject)}
