@@ -936,7 +936,13 @@ function ContactForm({ width }) {
             <p className={linastyles.default_text}>
               Para envio de <b>mídia kit, parcerias e afins</b>.
             </p>
-            <div style={{}}>
+            <div
+              style={{
+                justifyContent: "space-between",
+                display: "flex",
+                flexDirection: width <= 1000 ? "column" : "row",
+              }}
+            >
               <TextField
                 required
                 error={Boolean(touched.name && errors.name)}
@@ -949,9 +955,8 @@ function ContactForm({ width }) {
                 value={values.name}
                 variant="filled"
                 style={{
-                  minWidth: 100,
-                  marginRight: width <= 1450 ? 0 : 15,
-                  width: width <= 1450 ? "100%" : "auto",
+                  marginRight: width <= 1000 ? 0 : 15,
+                  width: width <= 1000 ? "100%" : "50%",
                 }}
               />
 
@@ -967,8 +972,8 @@ function ContactForm({ width }) {
                 value={values.subject}
                 variant="filled"
                 style={{
-                  marginTop: width <= 1450 ? 18 : 0,
-                  width: width <= 1450 ? "100%" : "auto",
+                  marginTop: width <= 1000 ? 18 : 0,
+                  width: width <= 1000 ? "100%" : "50%",
                 }}
               />
             </div>
