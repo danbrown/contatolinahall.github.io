@@ -372,7 +372,9 @@ export default function Hello() {
             <br />
             <br />
 
-            <h2 className={linastyles.default_title}>Redes Sociais</h2>
+            <h2 className={linastyles.default_title} id="SOCIAL">
+              Redes Sociais
+            </h2>
             <span className={linastyles.divider}></span>
             <SocialBar width={width} />
 
@@ -406,11 +408,7 @@ export default function Hello() {
             </div>
           </div>
         </div>
-        <div
-          id="SOCIAL"
-          className={parallelstyles.imageWrapper}
-          style={tosection(3)}
-        >
+        <div className={parallelstyles.imageWrapper} style={tosection(3)}>
           {width >= 1000 ? (
             <div
               style={{
