@@ -383,7 +383,7 @@ export default function Hello() {
                 href="https://streamlabs.com/linahall/tip"
                 target="_blank"
               >
-                Donate
+                PayPal
               </a>
               <a
                 className="btn btn-3 btn-3e icon-arrow-right"
@@ -391,7 +391,7 @@ export default function Hello() {
                 href="https://app.picpay.com/user/LinaHall"
                 target="_blank"
               >
-                Picpay
+                PicPay
               </a>
             </div>
           </div>
