@@ -27,6 +27,15 @@ const buttonStyles = {
   padding: "25px 100px 25px 25px",
   fontSize: 16,
 };
+const buttonStylesMobile = {
+  margin: 0,
+  marginTop: 10,
+  marginBottom: 10,
+  marginRight: 20,
+  backgroundColor: "#65007c",
+  padding: "25px 100px 25px 25px",
+  fontSize: 14,
+};
 
 export default function Hello() {
   const Router = useRouter();
@@ -177,14 +186,14 @@ export default function Hello() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginBottom: -100,
+                marginTop: -60,
                 overflow: "hidden",
               }}
             >
               <img
-                src="/img/sobremim2.png"
+                src="/img/live-on.png"
                 alt="Lina Hall"
-                style={{ width: "100%", maxWidth: "500px" }}
+                style={{ width: "100%" }}
               />
             </div>
           )}
@@ -229,9 +238,7 @@ export default function Hello() {
                   />
                 </div>
               </div>
-            </div>
 
-            <div className={linastyles.row_stretch}>
               <div className={linastyles.image_gallery_item_wrapper}>
                 <div className={linastyles.image_gallery_item}>
                   <Image
@@ -259,9 +266,7 @@ export default function Hello() {
                   />
                 </div>
               </div>
-            </div>
 
-            <div className={linastyles.row_stretch}>
               <div className={linastyles.image_gallery_item_wrapper}>
                 <div className={linastyles.image_gallery_item}>
                   <Image
@@ -312,13 +317,18 @@ export default function Hello() {
             <span className={linastyles.divider}></span>
             <br />
             <br />
-            <iframe
-              src="https://player.twitch.tv/?video=933809602&parent=linahall.com.br&autoplay=false"
-              height="400"
-              width="100%"
-              autoPlay={false}
-              allowFullScreen={true}
-            ></iframe>
+
+            <div className={linastyles.iframe_wrapper}>
+              <div className={linastyles.iframe_item}>
+                <iframe
+                  src="https://player.twitch.tv/?video=933809602&parent=linahall.com.br&autoplay=false"
+                  height="100%"
+                  width="100%"
+                  autoPlay={false}
+                  allowFullScreen={true}
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -335,7 +345,7 @@ export default function Hello() {
             <div className={linastyles.row}>
               <a
                 className="btn btn-3 btn-3e icon-arrow-right"
-                style={buttonStyles}
+                style={width > 1000 ? buttonStyles : buttonStylesMobile}
                 href="https://www.twitch.tv/linahall/clips?filter=clips&range=7d"
                 target="_blank"
               >
@@ -343,7 +353,7 @@ export default function Hello() {
               </a>
               <a
                 className="btn btn-3 btn-3e icon-arrow-right"
-                style={buttonStyles}
+                style={width > 1000 ? buttonStyles : buttonStylesMobile}
                 href="https://trello.com/b/ZoS7vvlX/nossa-coleção"
                 target="_blank"
               >
@@ -351,7 +361,7 @@ export default function Hello() {
               </a>
               <a
                 className="btn btn-3 btn-3e icon-arrow-right"
-                style={buttonStyles}
+                style={width > 1000 ? buttonStyles : buttonStylesMobile}
                 href="https://www.instagram.com/linahallstream/"
                 target="_blank"
               >
@@ -364,7 +374,7 @@ export default function Hello() {
 
             <h2 className={linastyles.default_title}>Redes Sociais</h2>
             <span className={linastyles.divider}></span>
-            <SocialBar />
+            <SocialBar width={width} />
 
             <br />
             <br />
@@ -379,7 +389,7 @@ export default function Hello() {
             <div className={linastyles.row}>
               <a
                 className="btn btn-3 btn-3e icon-arrow-right"
-                style={buttonStyles}
+                style={width > 1000 ? buttonStyles : buttonStylesMobile}
                 href="https://streamlabs.com/linahall/tip"
                 target="_blank"
               >
@@ -387,7 +397,7 @@ export default function Hello() {
               </a>
               <a
                 className="btn btn-3 btn-3e icon-arrow-right"
-                style={buttonStyles}
+                style={width > 1000 ? buttonStyles : buttonStylesMobile}
                 href="https://app.picpay.com/user/LinaHall"
                 target="_blank"
               >
@@ -427,12 +437,12 @@ export default function Hello() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginBottom: -100,
+                marginBottom: 0,
                 overflow: "hidden",
               }}
             >
               <img
-                src="/img/banner-cel.jpg"
+                src="/img/lina-conteudo-novo.jpg"
                 alt="Lina Hall"
                 style={{ width: "100%" }}
               />
@@ -463,16 +473,7 @@ export default function Hello() {
               />
             </div>
           ) : (
-            <div
-              style={{
-                minWidth: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: -100,
-                overflow: "hidden",
-              }}
-            ></div>
+            <div style={{}}></div>
           )}
         </div>
         <div
@@ -657,6 +658,14 @@ const HomeNavigator = (props) => {
     padding: "25px 120px 25px 25px",
     fontSize: 20,
   };
+  const stylesMobile = {
+    margin: 0,
+    marginTop: 10,
+    marginBottom: 10,
+    backgroundColor: "#65007c",
+    padding: "20px 80px 25px 25px",
+    fontSize: 13,
+  };
 
   return (
     <div className={linastyles.home_navigator}>
@@ -718,7 +727,7 @@ const HomeNavigator = (props) => {
       <a href={width <= 1000 ? "#CONTATO" : "#"}>
         <button
           className="btn btn-3 btn-3e icon-arrow-right"
-          style={styles}
+          style={width > 1000 ? styles : stylesMobile}
           onClick={() => {
             setSection(4);
           }}
@@ -731,7 +740,7 @@ const HomeNavigator = (props) => {
 };
 
 function SocialBar(props) {
-  const { color = "#65007c" } = props;
+  const { color = "#65007c", width } = props;
 
   return (
     <div className={linastyles.row}>
@@ -748,7 +757,11 @@ function SocialBar(props) {
         href="https://www.instagram.com/linahallstream/"
         target="_blank"
       >
-        <FontAwesomeIcon icon={["fab", "instagram"]} size="3x" color={color} />
+        <FontAwesomeIcon
+          icon={["fab", "instagram"]}
+          size={width > 1000 ? "3x" : "2x"}
+          color={color}
+        />
       </Button>
       <Button
         style={{
@@ -763,7 +776,11 @@ function SocialBar(props) {
         href="https://twitch.tv/linahall"
         target="_blank"
       >
-        <FontAwesomeIcon icon={["fab", "twitch"]} size="3x" color={color} />
+        <FontAwesomeIcon
+          icon={["fab", "twitch"]}
+          size={width > 1000 ? "3x" : "2x"}
+          color={color}
+        />
       </Button>
       <Button
         style={{
@@ -778,7 +795,11 @@ function SocialBar(props) {
         href="https://www.tiktok.com/@linahallstream?lang=pt-BR"
         target="_blank"
       >
-        <FontAwesomeIcon icon={["fab", "tiktok"]} size="3x" color={color} />
+        <FontAwesomeIcon
+          icon={["fab", "tiktok"]}
+          size={width > 1000 ? "3x" : "2x"}
+          color={color}
+        />
       </Button>
       <Button
         style={{
@@ -793,7 +814,11 @@ function SocialBar(props) {
         href="https://twitter.com/LinaHallStream"
         target="_blank"
       >
-        <FontAwesomeIcon icon={["fab", "twitter"]} size="3x" color={color} />
+        <FontAwesomeIcon
+          icon={["fab", "twitter"]}
+          size={width > 1000 ? "3x" : "2x"}
+          color={color}
+        />
       </Button>
       <Button
         style={{
@@ -808,7 +833,11 @@ function SocialBar(props) {
         href="https://www.youtube.com/channel/UCDoreMXXAU0j4sdw664u0Jw"
         target="_blank"
       >
-        <FontAwesomeIcon icon={["fab", "youtube"]} size="3x" color={color} />
+        <FontAwesomeIcon
+          icon={["fab", "youtube"]}
+          size={width > 1000 ? "3x" : "2x"}
+          color={color}
+        />
       </Button>
       <Button
         style={{
@@ -823,7 +852,11 @@ function SocialBar(props) {
         href="https://www.linkedin.com/in/linahallstream/"
         target="_blank"
       >
-        <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" color={color} />
+        <FontAwesomeIcon
+          icon={["fab", "linkedin"]}
+          size={width > 1000 ? "3x" : "2x"}
+          color={color}
+        />
       </Button>
       <Button
         style={{
@@ -838,7 +871,11 @@ function SocialBar(props) {
         href="https://discord.gg/NAY4paYM"
         target="_blank"
       >
-        <FontAwesomeIcon icon={["fab", "discord"]} size="3x" color={color} />
+        <FontAwesomeIcon
+          icon={["fab", "discord"]}
+          size={width > 1000 ? "3x" : "2x"}
+          color={color}
+        />
       </Button>
     </div>
   );
