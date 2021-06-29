@@ -866,7 +866,7 @@ function SocialBar(props) {
         }}
         variant="outlined"
         component={"a"}
-        href="https://discord.gg/XB4xEBsEHp"
+        href="https://discord.gg/F7kUMfH"
         target="_blank"
       >
         <FontAwesomeIcon

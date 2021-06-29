@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 export default function redirect() {
   useEffect(() => {
-    window.location.assign("https://discord.gg/XB4xEBsEHp");
+    window.location.assign("https://discord.gg/F7kUMfH");
   });
   return (
     <Head>
